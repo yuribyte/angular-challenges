@@ -6,22 +6,12 @@
       "inputs": ["production", "^production"],
       "cache": true
     },
-    "component-test": {
-      "inputs": ["default", "^production"],
-      "cache": true
-    },
+    "component-test": { "inputs": ["default", "^production"], "cache": true },
     "@nx/jest:jest": {
       "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"],
       "cache": true,
-      "options": {
-        "passWithNoTests": true
-      },
-      "configurations": {
-        "ci": {
-          "ci": true,
-          "codeCoverage": true
-        }
-      }
+      "options": { "passWithNoTests": true },
+      "configurations": { "ci": { "ci": true, "codeCoverage": true } }
     },
     "@nx/eslint:lint": {
       "inputs": [
@@ -52,9 +42,7 @@
     ],
     "sharedGlobals": []
   },
-  "cli": {
-    "packageManager": "npm"
-  },
+  "cli": { "packageManager": "npm" },
   "generators": {
     "@nx/angular:application": {
       "e2eTestRunner": "none",
@@ -101,11 +89,7 @@
         "componentTestingTargetName": "component-test"
       }
     },
-    {
-      "plugin": "@nx/jest/plugin",
-      "options": {
-        "targetName": "test"
-      }
-    }
-  ]
+    { "plugin": "@nx/jest/plugin", "options": { "targetName": "test" } }
+  ],
+  "nxCloudId": "671d331a708e87939df865ac"
 }
